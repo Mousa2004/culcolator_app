@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Customedbutton extends StatelessWidget {
   String name;
@@ -20,13 +21,15 @@ class Customedbutton extends StatelessWidget {
     return Expanded(
       flex: flex,
       child: Container(
+        height: 70.h,
+        width: 70.w,
         decoration: BoxDecoration(
-          borderRadius: BorderRadiusGeometry.circular(16),
-          color: background,
+          borderRadius: BorderRadiusGeometry.circular(16.r),
+          color: background ?? Color(0xFF303136),
         ),
 
         child: MaterialButton(
-          padding: EdgeInsets.symmetric(vertical: 15),
+          padding: EdgeInsets.symmetric(vertical: 15.h),
 
           onPressed: () {
             onPressed(name);
@@ -34,9 +37,9 @@ class Customedbutton extends StatelessWidget {
           child: Text(
             name,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 24.sp,
               fontWeight: FontWeight.w400,
-              color: textcolor,
+              color: textcolor ?? Color(0xFF29A8FF),
             ),
           ),
         ),
